@@ -8,8 +8,8 @@
 import Foundation
 
 // https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5
-// https://itunes.apple.com/search?term=jack+johnson&entity=song
-// https://itunes.apple.com/search?term=jack+johnson&entity=movie
+// https://itunes.apple.com/search?term=jack+johnson&entity=song&limit=5
+// https://itunes.apple.com/search?term=jack+johnson&entity=movie&limit=5
 
 class AlbumListViewModel {
     
