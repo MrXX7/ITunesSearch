@@ -11,6 +11,7 @@
 		AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B10128AE84C9006BF135 /* ContentView.swift */; };
 		AD60B10428AE84CB006BF135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10328AE84CB006BF135 /* Assets.xcassets */; };
 		AD60B10728AE84CB006BF135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */; };
+		AD60B11128AE9222006BF135 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11028AE9222006BF135 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AD60B10128AE84C9006BF135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD60B10328AE84CB006BF135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD60B11028AE9222006BF135 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		AD60B0FE28AE84C9006BF135 /* ITunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				AD60B10D28AE8FCD006BF135 /* Model */,
 				AD60B0FF28AE84C9006BF135 /* ITunesSearchApp.swift */,
+				AD60B10E28AE8FD2006BF135 /* View */,
 				AD60B10128AE84C9006BF135 /* ContentView.swift */,
+				AD60B10F28AE8FD7006BF135 /* ViewModel */,
 				AD60B10328AE84CB006BF135 /* Assets.xcassets */,
 				AD60B10528AE84CB006BF135 /* Preview Content */,
 			);
@@ -65,6 +70,28 @@
 				AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD60B10D28AE8FCD006BF135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD60B11028AE9222006BF135 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD60B10E28AE8FD2006BF135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD60B10F28AE8FD7006BF135 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			files = (
 				AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
+				AD60B11128AE9222006BF135 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
