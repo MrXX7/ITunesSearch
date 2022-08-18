@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+// https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5
+// https://itunes.apple.com/search?term=jack+johnson&entity=song
+// https://itunes.apple.com/search?term=jack+johnson&entity=movie
+
+class AlbumListViewModel {
+    
+    
+}
