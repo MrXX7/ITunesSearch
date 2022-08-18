@@ -12,6 +12,7 @@
 		AD60B10428AE84CB006BF135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10328AE84CB006BF135 /* Assets.xcassets */; };
 		AD60B10728AE84CB006BF135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */; };
 		AD60B11128AE9222006BF135 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11028AE9222006BF135 /* Album.swift */; };
+		AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AD60B10328AE84CB006BF135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD60B11028AE9222006BF135 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		AD60B10F28AE8FD7006BF135 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */,
 				AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
 				AD60B11128AE9222006BF135 /* Album.swift in Sources */,
