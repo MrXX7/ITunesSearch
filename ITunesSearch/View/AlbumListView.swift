@@ -12,18 +12,27 @@ struct AlbumListView: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(viewModel.albums){ album in
+                ForEach(viewModel.albums) { album in
                     Text(album.collectionName)
                 }
                 
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                } else {
-                    Color.gray
-                        .onAppear{
+                switch viewModel.state {
+                case .good:
+                    Color.clear
+                        .onAppear {
                             viewModel.loadMore()
                         }
+                case .isLoading:
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .frame(maxWidth: .infinity)
+                    
+                case .loadedAll:
+//                    EmptyView()
+                    Color.gray
+                case .error(let message):
+                    Text(message)
+                        .foregroundColor(.pink)
                 }
             }
             .listStyle(.plain)
