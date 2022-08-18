@@ -15,6 +15,7 @@
 		AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */; };
 		AD60B11528AEA6CF006BF135 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11428AEA6CF006BF135 /* Song.swift */; };
 		AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11628AEA6D4006BF135 /* Movie.swift */; };
+		AD60B11928AEACED006BF135 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11828AEACED006BF135 /* AlbumListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		AD60B11428AEA6CF006BF135 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		AD60B11628AEA6D4006BF135 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		AD60B11828AEACED006BF135 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +61,10 @@
 		AD60B0FE28AE84C9006BF135 /* ITunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				AD60B10D28AE8FCD006BF135 /* Model */,
 				AD60B0FF28AE84C9006BF135 /* ITunesSearchApp.swift */,
-				AD60B10E28AE8FD2006BF135 /* View */,
 				AD60B10128AE84C9006BF135 /* ContentView.swift */,
+				AD60B10D28AE8FCD006BF135 /* Model */,
+				AD60B10E28AE8FD2006BF135 /* View */,
 				AD60B10F28AE8FD7006BF135 /* ViewModel */,
 				AD60B10328AE84CB006BF135 /* Assets.xcassets */,
 				AD60B10528AE84CB006BF135 /* Preview Content */,
@@ -91,6 +93,7 @@
 		AD60B10E28AE8FD2006BF135 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD60B11828AEACED006BF135 /* AlbumListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
 				AD60B11128AE9222006BF135 /* Album.swift in Sources */,
 				AD60B11528AEA6CF006BF135 /* Song.swift in Sources */,
+				AD60B11928AEACED006BF135 /* AlbumListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

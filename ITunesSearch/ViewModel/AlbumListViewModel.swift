@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 // https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5
 // https://itunes.apple.com/search?term=jack+johnson&entity=song&limit=5
@@ -13,24 +14,42 @@ import Foundation
 
 class AlbumListViewModel: ObservableObject {
     
-    @Published var searchTerm: String = "Jack Johnson"
+    @Published var searchTerm: String = ""
     @Published var albums: [Album] = [Album]()
     
+    let limit: Int = 20
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    init() {
+        $searchTerm
+            .dropFirst()
+            .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
+            .sink { [weak self] term in
+            self?.fetchAlbums(for: term)
+        }.store(in: &subscriptions)
+    }
+    
     func fetchAlbums(for searchTerm: String) {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5") else {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(searchTerm)&entity=album&limit=5") else {
             return
         }
-        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
             if let error = error {
-                print("error: \(error.localizedDescription)")
+                print("urlsession error: \(error.localizedDescription)")
             } else if let data = data {
-                do{
+                
+                do {
              let result = try JSONDecoder().decode(AlbumResult.self, from: data)
-                    self.albums = result.results
+                    DispatchQueue.main.async {
+                        self.albums = result.results
+                    }
                 } catch {
-                    print("decoding error: \(error.localizedDescription)")
+                    print("decoding error: \(error)")
                 }
             }
-        })
-                                   }
-                                   }
+        }.resume()
+   }
+}

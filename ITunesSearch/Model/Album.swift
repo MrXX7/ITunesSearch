@@ -14,23 +14,26 @@ struct AlbumResult: Codable {
 }
 
 // MARK: - Result
-struct Album: Codable {
+struct Album: Codable, Identifiable {
     let wrapperType, collectionType: String
-    let artistID, collectionID, amgArtistID: Int
+    let id: Int
+    let artistID: Int
+    let amgArtistID: Int?
     let artistName, collectionName, collectionCensoredName: String
-    let artistViewURL, collectionViewURL: String
+    let artistViewURL: String?
+    let collectionViewURL: String
     let artworkUrl60, artworkUrl100: String
     let collectionPrice: Double
     let collectionExplicitness: String
     let trackCount: Int
     let copyright, country, currency: String
-    let releaseDate: Date
+    let releaseDate: String
     let primaryGenreName: String
 
     enum CodingKeys: String, CodingKey {
         case wrapperType, collectionType
         case artistID = "artistId"
-        case collectionID = "collectionId"
+        case id = "collectionId"
         case amgArtistID = "amgArtistId"
         case artistName, collectionName, collectionCensoredName
         case artistViewURL = "artistViewUrl"
