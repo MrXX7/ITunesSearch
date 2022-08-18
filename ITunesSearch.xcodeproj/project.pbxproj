@@ -13,6 +13,8 @@
 		AD60B10728AE84CB006BF135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */; };
 		AD60B11128AE9222006BF135 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11028AE9222006BF135 /* Album.swift */; };
 		AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */; };
+		AD60B11528AEA6CF006BF135 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11428AEA6CF006BF135 /* Song.swift */; };
+		AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11628AEA6D4006BF135 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		AD60B10628AE84CB006BF135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD60B11028AE9222006BF135 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		AD60B11428AEA6CF006BF135 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		AD60B11628AEA6D4006BF135 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				AD60B11028AE9222006BF135 /* Album.swift */,
+				AD60B11428AEA6CF006BF135 /* Song.swift */,
+				AD60B11628AEA6D4006BF135 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			files = (
 				AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */,
 				AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */,
+				AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
 				AD60B11128AE9222006BF135 /* Album.swift in Sources */,
+				AD60B11528AEA6CF006BF135 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
