@@ -8,13 +8,39 @@
 import SwiftUI
 
 struct MovieListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        @ObservedObject var viewModel: MovieListViewModel
+        
+        var body: some View {
+            List{
+                ForEach(viewModel.movies) { movie in
+                    Text(movie.trackName)
+                }
+                
+                switch viewModel.state {
+                case .good:
+                    Color.clear
+                        .onAppear {
+                            viewModel.loadMore()
+                        }
+                case .isLoading:
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .frame(maxWidth: .infinity)
+                    
+                case .loadedAll:
+                    //                    EmptyView()
+                    Color.gray
+                case .error(let message):
+                    Text(message)
+                        .foregroundColor(.pink)
+                }
+            }
+            .listStyle(.plain)
+        }
+        }
 
 struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieListView()
+        MovieListView(viewModel: MovieListViewModel())
     }
 }

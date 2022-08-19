@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class MovieListViewModel: ObservableObject {
     
@@ -14,11 +15,21 @@ class MovieListViewModel: ObservableObject {
     @Published var state: FetchState = .good
     
     private let service = APIService()
-
     
-        
-        let limit: Int = 20
-        var page: Int = 0
+    let defaultLimits = 50
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    init() {
+        $searchTerm
+            .dropFirst()
+            .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
+            .sink { [weak self] term in
+                self?.state = .good
+                self?.movies = []
+                self?.fetchMovies(for: term)
+            }.store(in: &subscriptions)
+    }
    
     func fetchMovies(for searchTerm: String) {
         
@@ -31,21 +42,27 @@ class MovieListViewModel: ObservableObject {
         }
         state = .isLoading
         
-        service.fetchMovies(searchTerm: searchTerm, page: page, limit: limit) { [weak self] result in
+        service.fetchMovies(searchTerm: searchTerm) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let results):
-                    for movie in results.results {
-                        self?.movies.append(movie)
+                    self?.movies = results.results
+            
+                    if results.resultCount == self?.defaultLimits {
+                        self?.state = .good
+                    } else {
+                        self?.state = .loadedAll
                     }
-                    self?.page += 1
-                    self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
-                    print("fetched \(results.resultCount)")
+                    print("fetched \(results.resultCount) - \(results.resultCount)")
                     
                 case .failure(let error):
-                    self?.state = .error("could not load: \(error.localizedDescription)")
+                    print("Could not load: \(error)")
+                    self?.state = .error(error.localizedDescription)
                 }
             }
         }
+    }
+    func loadMore() {
+        fetchMovies(for: searchTerm)
     }
 }
