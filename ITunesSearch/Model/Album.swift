@@ -26,7 +26,8 @@ struct Album: Codable, Identifiable {
     let collectionPrice: Double
     let collectionExplicitness: String
     let trackCount: Int
-    let copyright, country, currency: String
+    let copyright: String?
+    let country, currency: String
     let releaseDate: String
     let primaryGenreName: String
 

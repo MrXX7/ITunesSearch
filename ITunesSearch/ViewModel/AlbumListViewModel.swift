@@ -36,6 +36,11 @@ class AlbumListViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
+                self?.state = .good {
+                    didSet {
+                        print("state changed to: \(state)")
+                    }
+                }
                 self?.albums = []
                 self?.fetchAlbums(for: term)
             }.store(in: &subscriptions)
@@ -78,7 +83,7 @@ class AlbumListViewModel: ObservableObject {
                             self?.albums.append(album)
                         }
                         self?.page += 1
-                        self?.state = (self.albums.count == self?.limit) ? .good : .loadedAll
+                        self?.state = (result.results.count == self?.limit) ? .good : .loadedAll
                     }
                 } catch {
                     print("decoding error: \(error)")

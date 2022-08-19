@@ -42,6 +42,21 @@ struct AlbumListView: View {
     }
 }
 
+struct AlbumPlaceholderView{
+    @Binding var searchTerm
+    let suggestions = ["ramstein", "cry to me", "maneskin"]
+    var body: some View {
+        VStack {
+            ForEach(suggestions, id:\.self) { text in
+                Button(action: {}, label: {
+                    Text(text)
+                })
+                
+            }
+        }
+    }
+}
+
 struct AlbumListView_Previews: PreviewProvider {
     static var previews: some View {
         AlbumListView()
