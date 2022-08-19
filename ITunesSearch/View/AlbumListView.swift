@@ -8,57 +8,37 @@
 import SwiftUI
 
 struct AlbumListView: View {
-    @StateObject var viewModel = AlbumListViewModel()
+    @ObservedObject var viewModel: AlbumListViewModel
     var body: some View {
-        NavigationView {
-            List{
-                ForEach(viewModel.albums) { album in
-                    Text(album.collectionName)
-                }
-                
-                switch viewModel.state {
-                case .good:
-                    Color.clear
-                        .onAppear {
-                            viewModel.loadMore()
-                        }
-                case .isLoading:
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                        .frame(maxWidth: .infinity)
-                    
-                case .loadedAll:
-//                    EmptyView()
-                    Color.gray
-                case .error(let message):
-                    Text(message)
-                        .foregroundColor(.pink)
-                }
+        List{
+            ForEach(viewModel.albums) { album in
+                Text(album.collectionName)
             }
-            .listStyle(.plain)
-            .searchable(text: $viewModel.searchTerm)
-            .navigationTitle("Search Albums")
-        }
-    }
-}
-
-struct AlbumPlaceholderView{
-    @Binding var searchTerm
-    let suggestions = ["ramstein", "cry to me", "maneskin"]
-    var body: some View {
-        VStack {
-            ForEach(suggestions, id:\.self) { text in
-                Button(action: {}, label: {
-                    Text(text)
-                })
+            
+            switch viewModel.state {
+            case .good:
+                Color.clear
+                    .onAppear {
+                        viewModel.loadMore()
+                    }
+            case .isLoading:
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .frame(maxWidth: .infinity)
                 
+            case .loadedAll:
+                //                    EmptyView()
+                Color.gray
+            case .error(let message):
+                Text(message)
+                    .foregroundColor(.pink)
             }
         }
+        .listStyle(.plain)
     }
-}
-
+    }
 struct AlbumListView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumListView()
+        AlbumListView(viewModel: AlbumListViewModel())
     }
 }

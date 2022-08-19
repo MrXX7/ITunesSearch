@@ -24,7 +24,11 @@ class AlbumListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published var albums: [Album] = [Album]()
     
-    @Published var state: State = .good
+    @Published var state: State = .good {
+            didSet {
+                print("state changed to: \(state)")
+            }
+    }
     
     let limit: Int = 20
     var page: Int = 0
@@ -36,11 +40,7 @@ class AlbumListViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
-                self?.state = .good {
-                    didSet {
-                        print("state changed to: \(state)")
-                    }
-                }
+                self?.state = .good
                 self?.albums = []
                 self?.fetchAlbums(for: term)
             }.store(in: &subscriptions)
