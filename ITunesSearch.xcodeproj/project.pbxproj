@@ -18,6 +18,7 @@
 		AD60B11928AEACED006BF135 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B11828AEACED006BF135 /* AlbumListView.swift */; };
 		ADAD676E28AF798900315FBE /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD676D28AF798900315FBE /* AlbumSearchView.swift */; };
 		ADAD677028AF90C100315FBE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD676F28AF90C100315FBE /* APIError.swift */; };
+		ADAD677228AFBFD900315FBE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD677128AFBFD900315FBE /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		AD60B11828AEACED006BF135 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 		ADAD676D28AF798900315FBE /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
 		ADAD676F28AF90C100315FBE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		ADAD677128AFBFD900315FBE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */,
+				ADAD677128AFBFD900315FBE /* APIService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
 				AD60B11128AE9222006BF135 /* Album.swift in Sources */,
+				ADAD677228AFBFD900315FBE /* APIService.swift in Sources */,
 				AD60B11528AEA6CF006BF135 /* Song.swift in Sources */,
 				AD60B11928AEACED006BF135 /* AlbumListView.swift in Sources */,
 				ADAD677028AF90C100315FBE /* APIError.swift in Sources */,

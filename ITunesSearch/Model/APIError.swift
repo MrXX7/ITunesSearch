@@ -38,7 +38,7 @@ enum APIError: Error, CustomStringConvertible {
         case .badResponse(_):
             return "something wet wrong"
         case .decoding(let decodingError):
-            return decodingError.localizedDescription
+            return decodingError.localizedDescription ?? "something wet wrong"
         }
     }
 }
