@@ -18,11 +18,8 @@ class AlbumListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published var albums: [Album] = [Album]()
     
-    @Published var state: State = .good {
-            didSet {
-                print("state changed to: \(state)")
-            }
-    }
+    @Published var state: FetchState = .good
+    
     
     let limit: Int = 20
     var page: Int = 0
@@ -52,7 +49,7 @@ class AlbumListViewModel: ObservableObject {
             return
         }
         
-        guard state == State.good else {
+        guard state == FetchState.good else {
             return
         }
         state = .isLoading
