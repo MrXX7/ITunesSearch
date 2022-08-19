@@ -100,6 +100,10 @@ class AlbumListViewModel: ObservableObject {
             
         }.resume()
    }
+    func fetch<T>(type: T.Type, url: URL?, completion: @escaping (Result<T, APIError>) -> Void) {
+        
+    }
+    
     func createURL(for searchTerm: String, type: EntityType = .album) -> URL? {
         //    https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5&offset=10
         let baseURL = "https://itunes.apple.com/search"
