@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD338E3528AFD2F00089726E /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD338E3428AFD2F00089726E /* SongListViewModel.swift */; };
+		AD338E3728AFD4710089726E /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD338E3628AFD4710089726E /* FetchState.swift */; };
 		AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B0FF28AE84C9006BF135 /* ITunesSearchApp.swift */; };
 		AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60B10128AE84C9006BF135 /* ContentView.swift */; };
 		AD60B10428AE84CB006BF135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60B10328AE84CB006BF135 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD338E3428AFD2F00089726E /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		AD338E3628AFD4710089726E /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
 		AD60B0FC28AE84C9006BF135 /* ITunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD60B0FF28AE84C9006BF135 /* ITunesSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchApp.swift; sourceTree = "<group>"; };
 		AD60B10128AE84C9006BF135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				AD60B11428AEA6CF006BF135 /* Song.swift */,
 				AD60B11628AEA6D4006BF135 /* Movie.swift */,
 				ADAD676F28AF90C100315FBE /* APIError.swift */,
+				AD338E3628AFD4710089726E /* FetchState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				AD60B11228AE928B006BF135 /* AlbumListViewModel.swift */,
 				ADAD677128AFBFD900315FBE /* APIService.swift */,
+				AD338E3428AFD2F00089726E /* SongListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 			files = (
 				AD60B11328AE928B006BF135 /* AlbumListViewModel.swift in Sources */,
 				AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */,
+				AD338E3728AFD4710089726E /* FetchState.swift in Sources */,
+				AD338E3528AFD2F00089726E /* SongListViewModel.swift in Sources */,
 				ADAD676E28AF798900315FBE /* AlbumSearchView.swift in Sources */,
 				AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,

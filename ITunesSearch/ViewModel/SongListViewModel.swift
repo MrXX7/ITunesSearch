@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class SongListViewModel: ObservableObject {
+    @Published var songs: [Song] = [Song]()
+    
+    let service = APIService {
+        func 
+    }
+}

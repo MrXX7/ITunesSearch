@@ -14,14 +14,6 @@ import Combine
 
 class AlbumListViewModel: ObservableObject {
     
-    enum State: Comparable {
-        case good
-        case isLoading
-        case loadedAll
-        case error(String)
-    }
-    
-    
     
     @Published var searchTerm: String = ""
     @Published var albums: [Album] = [Album]()
