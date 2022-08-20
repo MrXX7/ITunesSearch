@@ -27,6 +27,7 @@
 		ADDEEA9A28B0A11800CE2117 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEA9928B0A11800CE2117 /* SearchView.swift */; };
 		ADDEEA9E28B0A1E200CE2117 /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEA9D28B0A1E200CE2117 /* EntityType.swift */; };
 		ADDEEAA028B0A8AD00CE2117 /* SearchAllListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEA9F28B0A8AD00CE2117 /* SearchAllListView.swift */; };
+		ADDEEAA228B0ADAC00CE2117 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEAA128B0ADAC00CE2117 /* SongListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		ADDEEA9928B0A11800CE2117 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		ADDEEA9D28B0A1E200CE2117 /* EntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
 		ADDEEA9F28B0A8AD00CE2117 /* SearchAllListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllListView.swift; sourceTree = "<group>"; };
+		ADDEEAA128B0ADAC00CE2117 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		AD338E3C28AFDB270089726E /* song */ = {
 			isa = PBXGroup;
 			children = (
+				ADDEEAA128B0ADAC00CE2117 /* SongListView.swift */,
 			);
 			path = song;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				AD338E3528AFD2F00089726E /* SongListViewModel.swift in Sources */,
 				ADAD676E28AF798900315FBE /* AlbumSearchView.swift in Sources */,
 				AD338E3928AFDA080089726E /* MovieListViewModel.swift in Sources */,
+				ADDEEAA228B0ADAC00CE2117 /* SongListView.swift in Sources */,
 				AD60B11728AEA6D4006BF135 /* Movie.swift in Sources */,
 				AD60B10028AE84C9006BF135 /* ITunesSearchApp.swift in Sources */,
 				AD60B11128AE9222006BF135 /* Album.swift in Sources */,

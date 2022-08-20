@@ -11,6 +11,11 @@ struct SearchView: View {
     
     @State private var searchTerm: String = ""
     @State private var selectedEntityType = EntityType.all
+    
+    @StateObject private var albumListViewModel = AlbumListViewModel()
+    @StateObject private var songListViewModel = SongListViewModel()
+    @StateObject private var movieListViewModel = MovieListViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -22,8 +27,19 @@ struct SearchView: View {
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
+                
                 Divider()
-                Spacer()
+                
+                switch selectedEntityType {
+                case .all:
+                    SearchAllListView(albumListViewModel: albumListViewModel, songListViewModel: songListViewModel, movieListViewModel: movieListViewModel)
+                case .album:
+                    AlbumListView(viewModel: albumListViewModel)
+                case .song:
+                    SongListViewModel()
+                case .movie:
+                    <#code#>
+                }
             }
             .searchable(text: $searchTerm)
             .navigationTitle("Search")
