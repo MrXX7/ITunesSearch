@@ -13,7 +13,7 @@ struct AlbumSearchView: View {
         NavigationView {
             Group {
                 if viewModel.searchTerm.isEmpty {
-                    AlbumPlaceholderView(searchTerm: $viewModel.searchTerm)
+                    SearchPlaceholderView(searchTerm: $viewModel.searchTerm)
                 } else {
                     AlbumListView(viewModel: viewModel)
                 }
@@ -23,7 +23,7 @@ struct AlbumSearchView: View {
             }
         }
     }
-struct AlbumPlaceholderView: View {
+struct SearchPlaceholderView: View {
     @Binding var searchTerm: String
     let suggestions = ["ramstein", "cry to me", "maneskin"]
     var body: some View {

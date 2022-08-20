@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SearchAllListView: View {
-    @ObservedObject private var albumListViewModel: AlbumListViewModel
-    @ObservedObject private var songListViewModel: SongListViewModel
-    @ObservedObject private var movieListViewModel: MovieListViewModel
+    
+    @ObservedObject var albumListViewModel: AlbumListViewModel
+    @ObservedObject var songListViewModel: SongListViewModel
+    @ObservedObject var movieListViewModel: MovieListViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Search All")
     }
 }
 

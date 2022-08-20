@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class SongListViewModel: ObservableObject {
     
@@ -19,7 +20,29 @@ class SongListViewModel: ObservableObject {
         
         let limit: Int = 20
         var page: Int = 0
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    init() {
+        $searchTerm
+            .dropFirst()
+            .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
+            .sink { [weak self] term in
+                self?.clear()
+                self?.fetchSongs(for: term)
+            }.store(in: &subscriptions)
+    }
+    
+    func clear() {
+        state = .good
+        songs = []
+        page = 0
+    }
    
+    func loadMore() {
+        fetchSongs(for: searchTerm)
+    }
+    
     func fetchSongs(for searchTerm: String) {
         
         guard !searchTerm.isEmpty else {

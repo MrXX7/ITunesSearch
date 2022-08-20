@@ -33,10 +33,15 @@ class AlbumListViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
-                self?.state = .good
-                self?.albums = []
+                self?.clear()
                 self?.fetchAlbums(for: term)
             }.store(in: &subscriptions)
+    }
+    
+    func clear() {
+        state = .good
+        albums = []
+        page = 0
     }
     
     func loadMore() {

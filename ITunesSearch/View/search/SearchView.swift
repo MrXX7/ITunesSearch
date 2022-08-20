@@ -36,9 +36,9 @@ struct SearchView: View {
                 case .album:
                     AlbumListView(viewModel: albumListViewModel)
                 case .song:
-                    SongListViewModel()
+                    SongListView(viewModel: songListViewModel)
                 case .movie:
-                    <#code#>
+                    MovieListView(viewModel: movieListViewModel)
                 }
             }
             .searchable(text: $searchTerm)
