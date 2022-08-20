@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @State private var searchTerm: String = ""
+    @State private var selectedEntityType = EntityType.all
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Picker("Select the media", selection: $selectedEntityType) {
+                    ForEach(EntityType.allCases) { type in
+                        Text(type.name())
+                            .tag(type)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                Divider()
+                Spacer()
+            }
+            .searchable(text: $searchTerm)
+            .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
