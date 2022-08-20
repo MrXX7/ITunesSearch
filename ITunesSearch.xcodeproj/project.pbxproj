@@ -28,6 +28,7 @@
 		ADDEEA9E28B0A1E200CE2117 /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEA9D28B0A1E200CE2117 /* EntityType.swift */; };
 		ADDEEAA028B0A8AD00CE2117 /* SearchAllListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEA9F28B0A8AD00CE2117 /* SearchAllListView.swift */; };
 		ADDEEAA228B0ADAC00CE2117 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEAA128B0ADAC00CE2117 /* SongListView.swift */; };
+		ADDEEAA428B0B2B200CE2117 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDEEAA328B0B2B200CE2117 /* SearchPlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		ADDEEA9D28B0A1E200CE2117 /* EntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
 		ADDEEA9F28B0A8AD00CE2117 /* SearchAllListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllListView.swift; sourceTree = "<group>"; };
 		ADDEEAA128B0ADAC00CE2117 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		ADDEEAA328B0B2B200CE2117 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				ADDEEA9928B0A11800CE2117 /* SearchView.swift */,
 				ADDEEA9F28B0A8AD00CE2117 /* SearchAllListView.swift */,
+				ADDEEAA328B0B2B200CE2117 /* SearchPlaceholderView.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				AD338E4028AFDDF70089726E /* MovieListView.swift in Sources */,
 				AD60B10228AE84C9006BF135 /* ContentView.swift in Sources */,
 				AD338E3728AFD4710089726E /* FetchState.swift in Sources */,
+				ADDEEAA428B0B2B200CE2117 /* SearchPlaceholderView.swift in Sources */,
 				ADDEEA9E28B0A1E200CE2117 /* EntityType.swift in Sources */,
 				AD338E3528AFD2F00089726E /* SongListViewModel.swift in Sources */,
 				ADAD676E28AF798900315FBE /* AlbumSearchView.swift in Sources */,

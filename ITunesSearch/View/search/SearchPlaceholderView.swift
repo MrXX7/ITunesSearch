@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct SearchPlaceholderView: View {
+    @Binding var searchTerm: String
+    let suggestions = ["ramstein", "cry to me", "maneskin"]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 20) {
+            Text("Trending").font(.title)
+            ForEach(suggestions, id:\.self) { text in
+                Button {
+                    searchTerm = text
+                } label: {
+                    Text(text).font(.title2)
+                }
+            }
+        }
     }
 }
 
 struct SearchPlaceholderView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchPlaceholderView()
+        SearchPlaceholderView(searchTerm: .constant("John"))
     }
 }

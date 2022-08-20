@@ -22,6 +22,7 @@ class MovieListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
@@ -53,7 +54,7 @@ class MovieListViewModel: ObservableObject {
                     } else {
                         self?.state = .loadedAll
                     }
-                    print("fetched \(results.resultCount) - \(results.resultCount)")
+                    print("fetched movies\(results.resultCount) - \(results.resultCount)")
                     
                 case .failure(let error):
                     print("Could not load: \(error)")
